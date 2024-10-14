@@ -1,0 +1,14 @@
+application:
+  logger_level: debug
+
+  web:
+    listen: 3000
+    ssl: false
+    crt: /etc/ssl/private/crt.crt
+    key: /etc/ssl/private/key.key
+
+  oidc:
+    configuration_url: #{{AUTHORITY_REALM_ADDRESS}}
+    client_id: #{{AUTHORITY_REALM_CLIENT_ID}}
+    client_secret: #{{AUTHORITY_REALM_CLIENT_SECRET}}
+   

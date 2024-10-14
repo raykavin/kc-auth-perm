@@ -1,0 +1,22 @@
+{
+    "name": "api_example_node",
+    "dockerComposeFile": [
+        "./../docker-compose.yaml"
+    ],
+    "service": "node",
+    "workspaceFolder": "/src/frontend",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "octref.vetur",
+                "esbenp.prettier-vscode",
+                "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+                "FinnTenzor.change-case",
+                "dbaeumer.vscode-eslint",
+                "Vue.volar",
+                "hyoretsu.code-spell-checker-language-pack",
+                "googlecloudtools.cloudcode"
+            ]
+        }
+    }
+}

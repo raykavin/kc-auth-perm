@@ -1,0 +1,12 @@
+services:
+  golang:
+    image: golang:1.23-alpine3.20
+    container_name: kc_example_go
+    environment:
+      - TZ=America/Belem
+    volumes:
+      - /etc/ssl/private:/etc/ssl/private:ro
+      - ./:/go/src/backend:rw
+    ports:
+      - "3000:3000"
+    tty: true

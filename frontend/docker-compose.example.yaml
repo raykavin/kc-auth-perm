@@ -1,0 +1,20 @@
+services:
+  node:
+    image: node:18-bookworm
+    container_name: kc_example_frontend
+    working_dir: /src/frontend
+    volumes:
+      - ./:/src/frontend
+    environment:
+      - TZ=America/Belem
+      - VITE_SSO_AUTHORITY_ADDRESS={AUTHORITY_REALM_HOST} 
+      - VITE_SSO_AUTHORITY_CLIENT_ID={AUTHORITY_REALM_CLIENT_ID}
+      - VITE_SSO_AUTHORITY_RESPONSE_TYPE=code
+      - VITE_SSO_AUTHORITY_SCOPE=openid email profile roles
+      - VITE_CALLBACK_URI=/callback
+      - VITE_POST_LOGOUT_REDIRECT_URI=/
+      - PORT=8080
+    ports:
+      - '8080:8080'
+    restart: on-failure
+    tty: true

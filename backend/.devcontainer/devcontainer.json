@@ -1,0 +1,39 @@
+{
+	"name": "kc_example_backend",
+	"dockerComposeFile": [
+		"./../docker-compose.yaml"
+	],
+	"service": "golang",
+	"workspaceFolder": "/go/src/backend",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.Go",
+				"ms-ceintl.vscode-language-pack-pt-br",
+				"streetsidesoftware.code-spell-checker-portuguese-brazilian",
+				"streetsidesoftware.code-spell-checker",
+				"golang.go-nightly",
+				"liuchao.go-struct-tag",
+				"yokoe.vscode-postfix-go",
+				"visualstudioexptteam.vscodeintellicode",
+				"redhat.vscode-yaml",
+				"cweijan.vscode-redis-client",
+				"FinnTenzor.change-case",
+				"wmaurer.change-case"
+			],
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "bash",
+						"icon": "terminal-bash"
+					}
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"go.toolsManagement.checkForUpdates": "local",
+				"go.useLanguageServer": true,
+				"go.gopath": "/go",
+				"go.goroot": "/usr/local/go"
+			}
+		}
+	}
+}
